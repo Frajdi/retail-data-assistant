@@ -47,6 +47,9 @@ uv.lock
 .env.example
 ```
 
+## High-Level Architecture
+
+![Retail Data Assistant Architecture](docs/architecture.svg)
 
 ## Requirements
 
