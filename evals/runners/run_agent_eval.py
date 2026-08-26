@@ -46,7 +46,7 @@ async def run_agent_eval(inputs:dict) -> dict:
     return {
         "result": result,
         "messages": result["messages"],
-        "final_answer": result["messages"][-1].content,
+        "final_answer": result["messages"][-1].text,
     }
 
 if __name__ == "__main__":

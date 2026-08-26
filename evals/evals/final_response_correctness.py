@@ -47,7 +47,7 @@ def agent_final_response_correct(run, example):
             "comment": "The agent produced no messages.",
         }
 
-    final_response = messages[-1].content
+    final_response = messages[-1].text
     expected_response = example.outputs["final_response_must_include"]
     question = example.inputs["question"]
 

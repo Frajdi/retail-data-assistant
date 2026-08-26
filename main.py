@@ -26,20 +26,13 @@ async def ask_agent(question: str, thread_id: UUID, big_query_service: BigQueryR
         }
     )
 
-    task = asyncio.create_task(agent.ainvoke(
+    return await agent.ainvoke(
         input = input,
         config = config,
         context=AgentContext(
             big_query_service=big_query_service
         )
-    ))
-
-    await task
-
-    return task.result()
-
-
-
+    )
 
 
 async def run_cli():
@@ -62,7 +55,7 @@ async def run_cli():
                 big_query_service=big_query_service
             )
 
-            response = result["messages"][-1].content
+            response = result["messages"][-1].text
 
             print(f"\nAssistant:\n{response}\n")
 
