@@ -49,7 +49,7 @@ uv.lock
 
 ## High-Level Architecture
 
-![Retail Data Assistant Architecture](docs/architecture.svg)
+![Retail Data Assistant Architecture](docs/agent_diagram.svg)
 
 ## Requirements
 
