@@ -1,0 +1,24 @@
+[
+  {
+    "inputs": {
+      "question": "How many customers are there?"
+    },
+    "outputs": {
+      "final_response_must_include": "100,000 customers",
+      "tool_trajectory": ["get_table_schema", "execute_query"],
+      "tool_args": {
+        "get_table_schema" : {
+          "table_name": "users"
+        },
+        "execute_query": {
+          "sql_query": {
+            "includes": [
+              "COUNT",
+              "users"
+            ]
+          } 
+        }
+      }
+    }
+  }
+]

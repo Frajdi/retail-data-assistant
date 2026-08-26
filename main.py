@@ -5,7 +5,7 @@ load_dotenv()
 import asyncio
 from uuid import uuid4, UUID
 
-from langchain_core.messages import HumanMessage, BaseMessage
+from langchain_core.messages import HumanMessage
 from langchain_core.runnables import RunnableConfig
 
 from src.agent.graph import agent, AgentState, AgentContext
