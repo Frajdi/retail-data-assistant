@@ -28,6 +28,15 @@ llm = ChatOpenAI(
     temperature=0,
     max_retries=5,
 )
+# llm = ChatOpenAI(
+#     model="gpt-5.6-terra",
+#     use_responses_api=True,
+#     reasoning={
+#         "effort": "medium",
+#         "summary": "auto",
+#     },
+#     output_version="responses/v1",
+# )
 
 # Bind tools to the llm
 model = llm.bind_tools(tools)
