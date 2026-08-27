@@ -6,6 +6,36 @@ This project implements a conversational data analysis assistant designed for no
 
 The prototype is built with LangGraph and supports dynamic SQL generation, multi-turn conversations, PII protection, resilient query execution, evaluation Pipeline, and end-to-end observability. While the prototype implements the core analytical workflow and selected production capabilities, the accompanying High-Level Design (HLD) describes how the system can be extended into a production-ready platform with historical analyst knowledge, persistent user preferences, saved reports, configurable personas, and additional capabilities such as charts, email delivery, and external data sources.
 
+## Table of Contents
+
+- [1. Key Capabilities](#1-key-capabilities)
+- [2. High-Level Architecture](#2-high-level-architecture)
+  - [2.1 Production Architecture](#21-production-architecture)
+- [3. Architecture Components](#3-architecture-components)
+- [4. Requirement-by-Requirement Design](#4-requirement-by-requirement-design)
+  - [4.1 Hybrid Intelligence — Golden Knowledge](#41-hybrid-intelligence--golden-knowledge)
+  - [4.2 Safety & PII Masking](#42-safety--pii-masking)
+  - [4.3 High-Stakes Oversight — Destructive Operations](#43-high-stakes-oversight--destructive-operations)
+  - [4.4 Continuous Improvement](#44-continuous-improvement)
+  - [4.5 Quality Assurance](#45-quality-assurance)
+  - [4.6 Observability](#46-observability)
+  - [4.7 Agility — Persona Management](#47-agility--persona-management)
+- [5. Agent Execution, State & Data Flow](#5-agent-execution-state--data-flow)
+- [6. Error Handling & Fallback Strategy](#6-error-handling--fallback-strategy)
+- [7. Technology Choices](#7-technology-choices)
+- [8. Setup Instructions](#8-setup-instructions)
+  - [8.1 Clone the Repository](#81-clone-the-repository)
+  - [8.2 Install Dependencies](#82-install-dependencies)
+  - [8.3 Environment Variables](#83-environment-variables)
+  - [8.4 Google Cloud / BigQuery Authentication](#84-google-cloud--bigquery-authentication)
+  - [8.5 Run the Agent](#85-run-the-agent)
+  - [8.6 Run Evaluations](#86-run-evaluations)
+- [9. Example Usage](#9-example-usage)
+  - [9.1 Simple Analysis](#91-simple-analysis)
+  - [9.2 Multi-Step Executive Report](#92-multi-step-executive-report)
+- [10. Future Extensions](#10-future-extensions)
+- [11. Limitations](#11-limitations)
+
 
 ## 1. Key Capabilities
 
