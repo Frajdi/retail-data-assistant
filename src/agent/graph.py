@@ -17,17 +17,17 @@ from src.domain.query_models import QuerySuccess, QueryFailure
 
 
 # Initialize the LLM
-# llm = ChatGoogleGenerativeAI(
-#     model="gemini-3.6-flash",
-# )
+llm = ChatGoogleGenerativeAI(
+    model="gemini-3.6-flash",
+)
 
 MAX_QUERY_RETRIES = 3
 
-llm = ChatOpenAI(
-    model="gpt-4.1-mini",
-    temperature=0,
-    max_retries=5,
-)
+# llm = ChatOpenAI(
+#     model="gpt-4.1-mini",
+#     temperature=0,
+#     max_retries=5,
+# )
 # llm = ChatOpenAI(
 #     model="gpt-5.6-terra",
 #     use_responses_api=True,
